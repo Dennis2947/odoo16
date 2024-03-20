@@ -1,0 +1,32 @@
+<odoo>
+    <menuitem id="real_estate_menu_root" name="Real Estate" sequence="1"/>
+
+    <menuitem id="real_estate_menu_properties" name="Properties" parent="real_estate_menu_root" sequence="10"/>
+    <menuitem id="real_estate_menu_agents" name="Agents" parent="real_estate_menu_root" sequence="20"/>
+
+    <act_window id="action_real_estate_properties"
+        name="Properties"
+        res_model="real.estate.property"
+        view_mode="tree,form"
+        binding_model="real.estate.property"
+        binding_views="list"
+        target="current"/>
+
+    <act_window id="action_real_estate_agents"
+        name="Agents"
+        res_model="real.estate.agent"
+        view_mode="tree,form"
+        binding_model="real.estate.agent"
+        binding_views="list"
+        target="current"/>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_real_estate_properties"
+              name="Properties"
+              action="action_real_estate_properties"
+              parent="real_estate_menu_properties"/>
+    <menuitem id="menu_real_estate_agents"
+              name="Agents"
+              action="action_real_estate_agents"
+              parent="real_estate_menu_agents"/>
+</odoo>
