@@ -1,0 +1,51 @@
+<odoo>
+    <record id="action_estate_properties" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.properties</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_real_estate_properties_form" model="ir.ui.view">
+        <field name="name">estate.properties.form</field>
+        <field name="model">estate.properties</field>
+        <field name="arch" type="xml">
+            <form string="Properties">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="location"/>
+                        <field name="date_availability"/>
+                        <field name="living_area"/>
+                        <field name="selling_price"/>
+                        <field name="bedrooms"/>
+                        <field name="garage"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_real_estate_property_tree" model="ir.ui.view">
+        <field name="name">estate.properties.tree</field>
+        <field name="model">estate.properties</field>
+        <field name="arch" type="xml">
+            <tree string="Properties">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="location"/>
+                <field name="date_availability"/>
+                <field name="living_area"/>
+                <field name="selling_price"/>
+                <field name="bedrooms"/>
+                <field name="garage"/>
+            </tree>
+        </field>
+    </record>
+    -->
+    <menuitem id="real_estate_menu_properties"
+              name="Properties"
+              action="action_estate_properties"
+              parent="real_estate_menu_root"
+              sequence="10"/>
+</odoo>

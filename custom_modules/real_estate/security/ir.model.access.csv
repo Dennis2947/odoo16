@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_real_estate_properties,estate.properties,model_estate_properties,,1,1,1,1
+access_real_estate_expenses,estate.expenses,model_estate_expenses,,1,1,1,1
+access_real_estate_invoices,real.estate.invoices,model_estate_invoices,,1,1,1,1
+access_real_estate_tenants,real.estate.tenants,model_estate_tenants,,1,1,1,1
+access_real_estate_inventory,real.estate.inventory,model_estate_inventory,,1,1,1,1

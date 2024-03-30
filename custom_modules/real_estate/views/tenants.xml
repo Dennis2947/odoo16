@@ -1,0 +1,41 @@
+<odoo>
+    <record id="action_estate_tenants" model="ir.actions.act_window">
+        <field name="name">Tenants</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.tenants</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_real_estate_tenants_form" model="ir.ui.view">
+        <field name="name">estate.tenants.form</field>
+        <field name="model">estate.tenants</field>
+        <field name="arch" type="xml">
+            <form string="Tenants">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="contact_information"/>
+                        <field name="property_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_real_estate_tenants_tree" model="ir.ui.view">
+        <field name="name">estate.tenants.tree</field>
+        <field name="model">estate.tenants</field>
+        <field name="arch" type="xml">
+            <tree string="Tenants">
+                <field name="name"/>
+                <field name="contact_information"/>
+                <field name="property_id"/>
+            </tree>
+        </field>
+    </record>
+    -->
+    <menuitem id="real_estate_menu_tenants"
+              name="Tenants"
+              action="action_estate_tenants"
+              parent="real_estate_menu_root"
+              sequence="10"/>
+</odoo>

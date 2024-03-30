@@ -1,0 +1,22 @@
+{
+    'name': 'Real Estate',
+    'version': '1.0',
+    'summary': 'Real Estate Management',
+    'category': 'Real Estate',
+    'author': 'Dennis Nyagah',
+    'license': 'AGPL-3',
+    'depends': ['base'],
+    'data': [
+        'views/menu_views.xml',
+        'views/properties.xml',
+        'views/invoices.xml',
+        'views/inventory.xml',
+        'views/tenants.xml',
+        'views/expenses.xml',
+        'security/ir.model.access.csv',
+    ],
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}
