@@ -1,0 +1,41 @@
+<odoo>
+    <record id="action_estate_inventory" model="ir.actions.act_window">
+        <field name="name">Inventory</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.inventory</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_real_estate_inventory_form" model="ir.ui.view">
+        <field name="name">estate.inventory.form</field>
+        <field name="model">estate.inventory</field>
+        <field name="arch" type="xml">
+            <form string="Inventory">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="quantity"/>
+                        <field name="property_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_real_estate_inventory_tree" model="ir.ui.view">
+        <field name="name">estate.inventory.tree</field>
+        <field name="model">estate.inventory</field>
+        <field name="arch" type="xml">
+            <tree string="Inventory">
+                <field name="name"/>
+                <field name="quantity"/>
+                <field name="property_id"/>
+            </tree>
+        </field>
+    </record>
+    -->
+    <menuitem id="real_estate_menu_inventory"
+              name="Inventory"
+              action="action_estate_inventory"
+              parent="real_estate_menu_root"
+              sequence="10"/>
+</odoo>

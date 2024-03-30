@@ -1,0 +1,43 @@
+<odoo>
+    <record id="action_estate_invoices" model="ir.actions.act_window">
+        <field name="name">Invoices</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.invoices</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_real_estate_invoices_form" model="ir.ui.view">
+        <field name="name">estate.invoices.form</field>
+        <field name="model">estate.invoices</field>
+        <field name="arch" type="xml">
+            <form string="Properties">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="amount"/>
+                        <field name="due_date"/>
+                        <field name="property_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_real_estate_invoices_tree" model="ir.ui.view">
+        <field name="name">estate.invoices.tree</field>
+        <field name="model">estate.invoices</field>
+        <field name="arch" type="xml">
+            <tree string="Invoices">
+                <field name="name"/>
+                <field name="amount"/>
+                <field name="due_date"/>
+                <field name="property_id"/>
+            </tree>
+        </field>
+    </record>
+    -->
+    <menuitem id="real_estate_menu_invoices"
+              name="Invoices"
+              action="action_estate_invoices"
+              parent="real_estate_menu_root"
+              sequence="10"/>
+</odoo>

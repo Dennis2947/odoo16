@@ -1,0 +1,43 @@
+<odoo>
+    <record id="action_estate_expenses" model="ir.actions.act_window">
+        <field name="name">Expenses</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.expenses</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_real_estate_expenses_form" model="ir.ui.view">
+        <field name="name">estate.expenses.form</field>
+        <field name="model">estate.expenses</field>
+        <field name="arch" type="xml">
+            <form string="Expenses">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="amount"/>
+                        <field name="property_id"/>
+                        <field name="date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_real_estate_expense_tree" model="ir.ui.view">
+        <field name="name">estate.expenses.tree</field>
+        <field name="model">estate.expenses</field>
+        <field name="arch" type="xml">
+            <tree string="Expenses">
+                <field name="name"/>
+                <field name="amount"/>
+                <field name="property_id"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+    -->
+    <menuitem id="real_estate_menu_expenses"
+              name="Expenses"
+              action="action_estate_expenses"
+              parent="real_estate_menu_root"
+              sequence="10"/>
+</odoo>

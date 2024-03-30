@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="real_estate_menu_root" name="Real Estate" sequence="10"/>
+
+    <menuitem id="real_estate_menu_properties" name="Properties" parent="real_estate_menu_root" sequence="1"/>
+    <menuitem id="real_estate_menu_expenses" name="Expenses" parent="real_estate_menu_root" sequence="1"/>
+    <menuitem id="real_estate_menu_tenants" name="Tenants" parent="real_estate_menu_root" sequence="1"/>
+    <menuitem id="real_estate_menu_inventory" name="Inventory" parent="real_estate_menu_root" sequence="1"/>
+    <menuitem id="real_estate_menu_invoices" name="Invoices" parent="real_estate_menu_root" sequence="1"/>
+
+</odoo>
